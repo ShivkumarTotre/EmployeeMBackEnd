@@ -12,25 +12,16 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@Table(name="leave_type")
-
+@Table(name = "leave_type")
 public class LeaveTypeInfo {
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int leave_type_id;
-	
-	@Column(name="leave_name")
-	private String leave_name;
 
-	public LeaveTypeInfo() {
-		super();
-	}
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "leave_type_id")
+    private int leaveTypeId;
 
-	public LeaveTypeInfo(int leave_type_id, String leave_name) {
-		super();
-		this.leave_type_id = leave_type_id;
-		this.leave_name = leave_name;
-	}
+    @Column(name = "leave_name")
+    private String leaveName;
 
+ 
 }

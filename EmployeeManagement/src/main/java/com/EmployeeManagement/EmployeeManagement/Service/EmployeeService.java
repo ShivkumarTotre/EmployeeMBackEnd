@@ -1,5 +1,6 @@
 package com.EmployeeManagement.EmployeeManagement.Service;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,18 +16,31 @@ public class EmployeeService {
 	@Autowired
 	EmployeeInfoable empRepo;
 	
+	@Autowired
+	DepartmentInfoable deptRepo;
+	
+	@Autowired
+	EmpInfoable empRepo1;
+	
+	@Autowired
+	LeaveTypeInfoable leavetypeRepo;
+	
 	public void addEmployee(EmployeeInfo emp)
 	{
 		empRepo.save(emp);
 	}
+
+	public List<DepartmentInfo> getDepartment() {
+		return deptRepo.findAll();
+	}
+
+	public List<EmpInfo> getEmployee() {
+		List<EmpInfo> a= empRepo1.findAll();
+		return a;
+	}
 	
-	@Autowired
-    private EmpInfoable emplist;
-	
-	public String list(Model model) {
-  //  List<EmpInfoable> entities = emplist.findAll();
-    //model.addAttribute("entities", entities);
-    return "list";
-}
+	public List<LeaveTypeInfo> getLeaveType(){
+		return leavetypeRepo.findAll();
+		}
 
 }

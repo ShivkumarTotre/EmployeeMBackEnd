@@ -6,30 +6,19 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import lombok.Getter;
-import lombok.Setter;
 
-@Getter
-@Setter
 @Entity
-@Table(name="Department")
+@Table(name = "department")
 public class DepartmentInfo {
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int dept_id;
-	
-	@Column(name="dept_name")
-	private String dept_name;
 
-	public DepartmentInfo() {
-		super();
-	}
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "dept_id")
+    private int dept_id;
 
-	public DepartmentInfo(int dept_id, String dept_name) {
-		super();
-		this.dept_id = dept_id;
-		this.dept_name = dept_name;
-	}
+    @Column(name = "dept_Name")
+    private String deptName;
 
+  
 }
+
