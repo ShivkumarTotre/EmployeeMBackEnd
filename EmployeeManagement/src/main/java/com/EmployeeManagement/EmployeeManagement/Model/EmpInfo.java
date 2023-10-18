@@ -32,4 +32,7 @@ public class EmpInfo {
     @JoinColumn(name = "dept_id")
     private DepartmentInfo departmentInfo;
 
+    @OneToOne
+    @JoinColumn(name = "dept_id")
+    private DepartmentInfo departmentInfo;		
 }

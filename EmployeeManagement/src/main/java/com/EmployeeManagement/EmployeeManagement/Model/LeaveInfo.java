@@ -1,6 +1,7 @@
 package com.EmployeeManagement.EmployeeManagement.Model;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
